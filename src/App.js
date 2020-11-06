@@ -1,10 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import VideoList from "./components/VideoList";
+import PrototypeVideoTile from "./components/PrototypeVideoTile";
 
 function App() {
   return (
     <div className="App">
-      <h1>Mateusz</h1>
+        <VideoList>
+            <PrototypeVideoTile />
+            <PrototypeVideoTile />
+            <PrototypeVideoTile />
+            <PrototypeVideoTile />
+        </VideoList>
     </div>
   );
 }
