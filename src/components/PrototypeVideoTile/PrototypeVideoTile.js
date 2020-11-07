@@ -1,5 +1,5 @@
 import React from "react";
-import './PrototypeVideoTile.css';
+import "./PrototypeVideoTile.css";
 
 function PrototypeVideoTile() {
   return (
