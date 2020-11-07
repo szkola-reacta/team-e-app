@@ -1,0 +1,68 @@
+ul {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.App-header {
+    width: 100%;
+    background:#222121;
+    height: 100px;
+}
+
+.App-header-wrapper {
+    max-width: 1366px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+.App-header-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.App-header-logo-img {
+    width: 84px;
+    height: 100px;
+}
+
+.App-header-logo-text {
+    font-family: 'Lobster', 'Helvetica', 'Arial', sans-serif;
+    font-size: 40px;
+    font-weight: lighter;
+    color: #fff;
+}
+
+.App-header-nav {
+    height: 90px;
+    display: flex;
+    align-items: center;
+}
+
+.App-header-nav ul {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.App-header-nav ul li {
+    padding: 30px;
+}
+
+.App-header-nav-link {
+    color: #ddd;
+    font-size: 22px;
+}
+
+.App-header-nav-link-active {
+    color: #F32A1A;
+}

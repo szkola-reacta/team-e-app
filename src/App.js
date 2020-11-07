@@ -1,9 +1,17 @@
 import "./App.css";
+import Header from "./common/Header";
+import data from "./Data";
 
 function App() {
   return (
     <div className="App">
-      <h1>Mateusz</h1>
+      {data.map(el => (
+        <Header
+          key={`logo-${el.id}`}
+          image={el.image}
+          alt={el.alt}
+        />
+      ))}
     </div>
   );
 }
