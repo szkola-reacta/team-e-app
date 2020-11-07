@@ -1,0 +1,9 @@
+.PrototypeVideoTile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #28282d;
+    border: 1px solid #28282D;
+    width: 300px;
+    height: 300px;
+}
