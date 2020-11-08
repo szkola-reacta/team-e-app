@@ -1,7 +1,7 @@
 import "./App.css";
 
-import VideoList from "./components/VideoList";
-import PrototypeVideoTile from "./components/PrototypeVideoTile";
+import VideoList from "./common/Containers/VideoList";
+import PrototypeVideoTile from "./common/Tile/PrototypeVideoTile";
 
 
 function App() {
