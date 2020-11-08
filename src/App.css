@@ -1,13 +1,35 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  background: #333;
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgb(54, 54, 54);
+}
+
+.App {
+  text-align: center;
 }
 
 *, ::after, ::before {
   box-sizing: inherit;
 }
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: rgb(54, 54, 54);
+.App-link {
+  color: #61dafb;
 }
