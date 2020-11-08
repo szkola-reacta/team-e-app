@@ -1,7 +1,8 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -17,13 +18,17 @@ html, body {
 }
 
 body {
-  background: #333;
+  /*background-color: rgb(54, 54, 54);*/
+  background-color: #333;
   font-family: 'Montserrat', sans-serif;
-  background-color: rgb(54, 54, 54);
 }
 
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 *, ::after, ::before {

@@ -15,6 +15,12 @@ a {
     width: 100%;
     background:#222121;
     height: 100px;
+
+    /*add by mateusz*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
 }
 
 .App-header-wrapper {
