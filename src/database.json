@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Mój ulubiony filmik 1",
+        "description": "Opis mojego ulubionego filmiku",
+        "video_url": "https://www.youtube.com/watch?v=UG2dCJ9s5b0"
+    },
+    {
+        "title": "Mój ulubiony filmik 2",
+        "description": "Opis mojego ulubionego filmiku 2",
+        "video_url": "https://www.youtube.com/watch?v=OmKbGOARXao"
+    },
+    {
+        "title": "Mój ulubiony filmik 3",
+        "description": "Opis mojego ulubionego filmiku 3",
+        "video_url": "https://www.youtube.com/watch?v=BEm0AjTbsac"
+    }
+]
