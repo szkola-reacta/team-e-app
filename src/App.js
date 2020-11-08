@@ -3,8 +3,8 @@ import Header from "./common/Header";
 import data from "./Data";
 
 import VideoList from "./common/Containers/VideoList";
-import PrototypeVideoTile from "./common/Tile/PrototypeVideoTile";
-
+import {Tile} from "./common/Tile";
+import database from "./Data/database.json";
 
 function App() {
   return (
@@ -17,16 +17,14 @@ function App() {
             />
         ))}
         <VideoList>
-            <PrototypeVideoTile />
-            <PrototypeVideoTile />
-            <PrototypeVideoTile />
-            <PrototypeVideoTile />
-            <PrototypeVideoTile />
-            <PrototypeVideoTile />
-            <PrototypeVideoTile />
-            <PrototypeVideoTile />
-            <PrototypeVideoTile />
-            <PrototypeVideoTile />
+            {database.map(el => (
+                <Tile
+                    key={`tile-${el.id}`}
+                    title={el.title}
+                    url={el.video_url}
+                    description={el.description}
+                />
+            ))}
         </VideoList>
     </div>
   );
