@@ -1,7 +1,13 @@
+import React from "react";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route
+  } from "react-router-dom";
 import "./App.css";
-import Header from "./common/Header";
-import data from "./Data";
 
+import data from "./Data";
+import Header from "./common/Header";
 import VideoList from "./common/Containers/VideoList";
 import {Tile} from "./common/Tile";
 import database from "./Data/database.json";
@@ -10,25 +16,36 @@ import Page404 from  "./common/Page404";
 function App() {
   return (
     <div className="App">
-        {data.map(el => (
-            <Header
-                key={`logo-${el.id}`}
-                image={el.image}
-                alt={el.alt}
-            />
-        ))}
-        <VideoList>
-            {database.map(el => (
-                <Tile
-                    key={`tile-${el.id}`}
-                    title={el.title}
-                    url={el.video_url}
-                    description={el.description}
-                />
-            ))}
-        </VideoList>
-        <Page404 />
-
+        <Router>
+                {data.map(el => (
+                    <Header
+                        key={`logo-${el.id}`}
+                        image={el.image}
+                        alt={el.alt}
+                    />
+                ))}
+            <Switch>
+                <Route path="/home" exact>
+                    <VideoList>
+                        {database.map(el => (
+                            <Tile
+                                key={`tile-${el.id}`}
+                                title={el.title}
+                                url={el.video_url}
+                                description={el.description}
+                            />
+                        ))}
+                    </VideoList>
+                </Route>
+                <Route path="/about">
+                {/* AboutPage */}
+                </Route>
+                <Route path="/addmovie">
+                {/* AddMoviePage */}
+                </Route>
+                <Page404 />
+            </Switch>
+        </Router>
     </div>
   );
 }

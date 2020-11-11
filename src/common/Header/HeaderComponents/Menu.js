@@ -1,19 +1,22 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { BrowserRouter as Router } from "react-router-dom";
 
-function Menu() {
+function Menu({ opened }) {
+
+    const styles = {
+        left: opened ? "0%": "-100%"
+    };
+
+    const hideIfActive = () => !opened;
+
     return(
-        <Router>
-            <nav className="App-header-nav">
-                <ul>
-                    <li><NavLink exact to="/home" className="App-header-nav-link" activeClassName="App-header-nav-link-active">Home</NavLink></li>
-                    <li><NavLink exact to="/about" className="App-header-nav-link" activeClassName="App-header-nav-link-active">About</NavLink></li>
-                    <li><NavLink exact to="/movie" className="App-header-nav-link" activeClassName="App-header-nav-link-active">Movie</NavLink></li>
-                </ul>
-            </nav>
-        </Router>
-
+        <nav className="App__header__nav">
+            <ul className="App__header__nav__links" style={styles}>
+                <li><NavLink exact to="/home" className="App__header__nav__link" onClick={hideIfActive} activeClassName="App__header__nav__link__active">Home</NavLink></li>
+                <li><NavLink exact to="/about" className="App__header__nav__link" onClick={hideIfActive} activeClassName="App__header__nav__link__active">About</NavLink></li>
+                <li><NavLink exact to="/addmovie" className="App__header__nav__link" activeClassName="App__header__nav__link__active">Add Movie</NavLink></li>
+            </ul>
+        </nav>
     );
 }
 

@@ -1,0 +1,133 @@
+$bg-header: #222121;
+$logo-font-family: 'Lobster', 'Helvetica', 'Arial', sans-serif;
+$logo-color: #fff;
+$font-color: #ddd;
+$link-color-hover-active: #F32919;
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.App__header {
+    width: 100%;
+    background:$bg-header;
+    height: 100px;
+    box-shadow: 1px 1px 15px black;
+
+    /*add by mateusz*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    &__wrapper {
+        max-width: 1366px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__logo__img {
+        width: 84px;
+        height: 100px;
+    }
+
+    &__logo__text {
+        font-family: $logo-font-family;
+        font-size: 40px;
+        font-weight: lighter;
+        color: $logo-color;
+    }
+
+    &__nav {
+        height: 90px;
+        display: flex;
+        align-items: center;
+
+        ul {
+            display: flex;
+            flex: 1;
+
+            li {
+                margin: 0 20px;
+            }
+        }
+
+        &__link {
+            color: $font-color;
+            font-size: 22px;
+            border-radius: 30px;
+            padding: 10px 20px;
+            transition: 0.3s;
+
+            &:hover,
+            &__active {
+                background: $link-color-hover-active;
+                border-radius: 30px;
+            }
+        }
+    }
+
+    &__hamburger {
+        display: inline-block;
+        cursor: pointer;
+        display: none;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+
+        &__bar1,
+        &__bar2,
+        &__bar3 {
+            width: 35px;
+            height: 4px;
+            background-color: $font-color;
+            margin: 7px 0;
+            transition: 0.4s;
+        }
+
+        // &__bar1__change {
+        //     transform: rotate(-45deg) translate(-9px, 6px);
+        // }
+
+        // &__change &__bar2 {
+        //     opacity: 0;
+        // }
+
+        // &__change &__bar3 {
+        //     transform: rotate(45deg) translate(-8px, -8px);
+        // }
+    }
+}
+
+@media screen and (max-width: 800px) {
+        .App__header__hamburger {
+            display: block;
+        }
+
+        .App__header__nav {
+
+            &__links {
+                flex-direction: column;
+                background: #222121;
+                z-index: 1;
+                height: 100vh;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                justify-content: space-around;
+                transition: 0.3s;
+                opacity: 0.98;
+            }
+        }
+}
