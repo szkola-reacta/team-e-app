@@ -25,9 +25,11 @@ function App() {
                         alt={el.alt}
                     />
                 ))}
-            <Greetings />
             <Switch>
                 <Route path="/home" exact>
+                    <Greetings />
+                </Route>
+                <Route path="/videolist">
                     <VideoList>
                         {database.map(el => (
                             <Tile
