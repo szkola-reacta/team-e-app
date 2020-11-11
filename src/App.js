@@ -8,6 +8,7 @@ import "./App.css";
 
 import data from "./Data";
 import Header from "./common/Header";
+import {Greetings} from "./common/Greetings";
 import VideoList from "./common/Containers/VideoList";
 import {Tile} from "./common/Tile";
 import database from "./Data/database.json";
@@ -24,6 +25,7 @@ function App() {
                         alt={el.alt}
                     />
                 ))}
+            <Greetings />
             <Switch>
                 <Route path="/home" exact>
                     <VideoList>
