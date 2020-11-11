@@ -26,7 +26,7 @@ function App() {
                     />
                 ))}
             <Switch>
-                <Route path="/home" exact>
+                <Route path="/" exact>
                     <Greetings />
                 </Route>
                 <Route path="/videolist">
