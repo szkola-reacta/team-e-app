@@ -19,8 +19,8 @@ export const Tile = ({ title, url, description }) => {
             <ReactPlayer
                 className="tileWrapper__player"
                 url={url}
-                width="400px"
-                height="400px"
+                width={400}//changed to number - Kamil
+                height={400}//changed to number - Kamil
                 controls
                 light
             />
