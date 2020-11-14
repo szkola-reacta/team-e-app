@@ -8,7 +8,7 @@ function Page404() {
         <div>
             <img className="page404__img" src={Img404} alt="Error 404 info page" />
             <Link to="/">
-                <button className="page404__button">Back to home</button>
+                <button className="page404__button">Back to main page</button>
             </Link>
         </div>
     );
