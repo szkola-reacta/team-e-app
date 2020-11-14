@@ -9,7 +9,7 @@ img {
     height: auto;
 }
 
-.App__header {
+.header {
     width: 100%;
     background:$bg-header;
     height: 100px;
@@ -35,16 +35,18 @@ img {
         align-items: center;
     }
 
-    &__logo__img {
-        width: 84px;
-        height: 100px;
-    }
+    &__logo{
+        &__img {
+            width: 84px;
+            height: 100px;
+        }
 
-    &__logo__text {
-        font-family: $logo-font-family;
-        font-size: 40px;
-        font-weight: lighter;
-        color: $logo-color;
+        &__text {
+            font-family: $logo-font-family;
+            font-size: 40px;
+            font-weight: lighter;
+            color: $logo-color;
+        }
     }
 
     &__nav {
@@ -60,19 +62,19 @@ img {
                 margin: 0 10px;
             }
         }
+    }
 
-        &__link {
-            color: $font-color;
-            font-size: 22px;
+    &__link {
+        color: $font-color;
+        font-size: 22px;
+        border-radius: 30px;
+        padding: 10px 20px;
+        transition: 0.3s;
+
+        &:hover,
+        &__active {
+            background: $link-color-hover-active;
             border-radius: 30px;
-            padding: 10px 20px;
-            transition: 0.3s;
-
-            &:hover,
-            &__active {
-                background: $link-color-hover-active;
-                border-radius: 30px;
-            }
         }
     }
 
@@ -85,37 +87,34 @@ img {
         top: 50%;
         transform: translateY(-50%);
         z-index: 2;
+    }
 
-        &__bar1,
-        &__bar2,
-        &__bar3 {
-            width: 35px;
-            height: 4px;
-            background-color: $font-color;
-            margin: 7px 0;
-            transition: 0.4s;
-        }
+    &__bar1,
+    &__bar2,
+    &__bar3 {
+        width: 35px;
+        height: 4px;
+        background-color: $font-color;
+        margin: 7px 0;
+        transition: 0.4s;
     }
 }
 
 @media screen and (max-width: 1000px) {
-        .App__header__hamburger {
+        .header__hamburger {
             display: block;
         }
 
-        .App__header__nav {
-
-            &__links {
-                flex-direction: column;
-                background: #222121;
-                z-index: 1;
-                height: 100vh;
-                width: 100%;
-                position: absolute;
-                top: 0;
-                justify-content: space-around;
-                transition: 0.3s;
-                opacity: 0.98;
-            }
+        .header__links__list {
+            flex-direction: column;
+            background: #222121;
+            z-index: 1;
+            height: 100vh;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            justify-content: space-around;
+            transition: 0.3s;
+            opacity: 0.98;
         }
 }
