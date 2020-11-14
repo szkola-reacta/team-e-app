@@ -3,7 +3,7 @@ import Header from "./common/Header";
 import data from "./Data";
 
 import VideoList from "./common/Containers/VideoList";
-import {Tile} from "./common/Tile";
+import Tile from "./common/Tile";
 import database from "./Data/database.json";
 import Page404 from  "./common/Page404";
 
