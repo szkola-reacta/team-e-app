@@ -1,0 +1,30 @@
+@mixin animation-mixin($name, $from, $to) {
+  @keyframes #{$name} {
+    0% {transform: translateX($from);}
+    100% {transform: translateX($to);}
+  }
+}
+
+@include animation-mixin(slideInFromLeft, -100%, 0);
+@include animation-mixin(slideInFromRight, 100%, 0);
+
+.page404 {
+  &__img {
+    margin: 164px 0 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    height: auto;
+    animation: 0.7s ease-out 0s 1 slideInFromLeft;
+  }
+
+  &__button {
+    font-family: 'Montserrat', sans-serif;
+    animation: 1s ease-out 0s 1 slideInFromRight;
+    font-size: 22px;
+    border-radius: 30px;
+    border: 15px;
+    padding: 10px 20px;
+  }
+}
