@@ -12,7 +12,7 @@ import {Greetings} from "./common/Greetings";
 import VideoList from "./common/Containers/VideoList";
 import Tile from "./common/Tile";
 import database from "./Data/database.json";
-// import Page404 from  "./common/Page404";
+import Page404 from  "./common/Page404";
 
 function App() {
   return (
@@ -48,7 +48,9 @@ function App() {
                 {/* AddMoviePage */}
                 </Route>
 
-                {/* <Page404 /> */}
+                <Route path="*">
+                    <Page404 />
+                </Route>
             </Switch>
         </Router>
     </div>
