@@ -5,7 +5,7 @@ import "./style.scss";
 export const Tile = ({ title, url, description }) => {
 
     const MAX_TEXT_LENGTH = 128;
-    const MIN_TEXT_LENGTH = 64;
+    const MIN_TEXT_LENGTH = 70;
 
     const cutText = (description, header) => {
         if (description.length > MAX_TEXT_LENGTH) {
