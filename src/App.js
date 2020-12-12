@@ -33,6 +33,12 @@ function App() {
         setData([...data, values]);
     };
 
+    // DELETE MOVIE
+    // const deleteItem = id => {
+    //     const newData = data.filter(item => item.id !== id);
+    //     setData(newData);
+    // };
+
   return (
     <div className="App">
         <Router>
