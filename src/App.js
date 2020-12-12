@@ -6,7 +6,6 @@ import {
   } from "react-router-dom";
 import "./App.css";
 
-import data from "./Data";
 import Header from "./common/Header";
 import {Greetings} from "./common/Greetings";
 import VideoList from "./common/Containers/VideoList";
@@ -18,13 +17,7 @@ function App() {
   return (
     <div className="App">
         <Router>
-                {data.map(el => (
-                    <Header
-                        key={`logo-${el.id}`}
-                        image={el.image}
-                        alt={el.alt}
-                    />
-                ))}
+                <Header />
             <Switch>
                 <Route path="/" exact>
                     <Greetings />

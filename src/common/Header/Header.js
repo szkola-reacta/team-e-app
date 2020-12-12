@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Logo, Menu } from "./HeaderComponents";
-import "./Header.scss";
 
-function Header({ image, alt }) {
+import "./Header.scss";
+import logo from "../../Data/images/logo.png";
+
+function Header() {
     const [opened, setOpened] = useState(false);
 
     const handleToggle = () => {
@@ -25,10 +27,13 @@ function Header({ image, alt }) {
         <header className="header">
             <div className="header__wrapper">
                 <Logo
-                    image={image}
-                    alt={alt}
+                    image={logo}
+                    alt="Logo MovieApp"
                 />
-                <Menu opened={opened} />
+                <Menu
+                    opened={opened}
+                    closeMenu={handleToggle}
+                />
                 <div className="header__hamburger" onClick={handleToggle}>
                     <div className="header__bar1" style={styles.bar1} ></div>
                     <div className="header__bar2" style={styles.bar2}></div>
