@@ -54,6 +54,11 @@
         align-items: center;
         margin-top: 10px;
         overflow: hidden;
+
+        //added by Kamil
+        span {
+            word-break: break-all;
+        }
     }
 
     &__button {

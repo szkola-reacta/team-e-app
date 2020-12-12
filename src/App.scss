@@ -23,20 +23,19 @@ html, body {
 }
 
 body {
-  /*background-color: rgb(54, 54, 54);*/
+  /* background-color: rgb(54, 54, 54); */
   background-color: #333;
   font-family: 'Montserrat', sans-serif;
 }
 
 .App {
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-*, ::after, ::before {
+*, *::after, *::before {
   box-sizing: inherit;
 }
 
